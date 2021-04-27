@@ -1,0 +1,104 @@
+*
+{
+    margin:0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+#container
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+}
+
+th
+{
+    color: rgb(82, 82, 236);
+}
+.title
+{
+background-color: blue;
+padding: 20px;
+}
+::placeholder
+{
+    color: white;
+}
+input[type="date"]::-webkit-calendar-picker-indicator
+ {
+  filter: invert(0.8);
+  opacity: 1;
+  }
+.buttons
+{
+background-color: darkseagreen;
+}
+.innercontainer
+{
+    margin: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;    
+    background-color: darkseagreen;
+}
+.for_all
+{
+    padding:10px;
+    margin:10px;
+}
+#date{
+    padding:2px;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    border:2px solid black;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#b1,#b2
+{
+    background-color: rgb(219, 219, 121);
+    color: darkmagenta;
+}
+.table
+{
+    margin:20px 10px;
+    background: brown;
+}
+th,td{
+    padding: 13px 10px;
+}
+p
+{
+text-align: center;
+justify-content: center;
+}
+textarea
+{
+    margin: auto;
+}
+
+
+#b1
+{
+    margin:10px;
+padding:5px;
+}
+
+#b2
+{
+    margin:10px;
+padding:5px
+}
+
