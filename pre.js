@@ -49,9 +49,13 @@ function delete1(index) {
 }
 function Clear1() 
 {
+    confirm1=confirm("Are you sure");
+    if (confirm1==true)
+    {
     table_content = document.getElementById('values')
     table_content.innerHTML="";
     localStorage.clear();
+    }
 }
 
 update();
