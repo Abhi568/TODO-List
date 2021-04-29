@@ -1,4 +1,5 @@
-function clicked1() {
+function clicked1()
+ {
     console.log("call");
     Subject1 = document.getElementById("subj").value;
     Description = document.getElementById("desc").value;
@@ -23,15 +24,14 @@ function update()
     if (localStorage.getItem('itemsJson') != null) {
         JsonString = localStorage.getItem('itemsJson');
         Arrayofitems = JSON.parse(JsonString);
-        
         str = ''
         Arrayofitems.forEach((element, index) => {
             str += `
        <tr>
-        <th><text>${index + 1}</text></th>
-        <td><text>${element[0]}</text></td>
-        <td><text>${element[1]}</text></td>
-        <td><text>${element[2]}</text></td>
+        <td>${index + 1}</td>
+        <td>${element[0]}</td>
+        <td>${element[1]}</td>
+        <td>${element[2]}</td>
         <td><button onclick="delete1(${index})">Delete</button></td>
         </tr>
        `
@@ -55,6 +55,32 @@ function Clear1()
     table_content = document.getElementById('values')
     table_content.innerHTML="";
     localStorage.clear();
+    }
+}
+var Search_items = () => {
+    var table_content = document.getElementById("values");
+    var tr_content = table_content.getElementsByTagName('tr');
+    search_bar_content = document.getElementById("input_cont").value.toUpperCase()
+    for (var i = 0; i < tr_content.length; i++) {
+    
+        var td_content_name = tr_content[i].getElementsByTagName('td')[1];
+        var td_content_date = tr_content[i].getElementsByTagName('td')[3];
+        var main_data_search_name = td_content_name.textContent || td_content_name.innerHTML
+        var main_data_search_date = td_content_date.textContent || td_content_date.innerHTML;
+        
+        if (main_data_search_name || main_data_search_date) {
+            if (main_data_search_name.toUpperCase().indexOf(search_bar_content) > -1) {
+                console.log("found");
+                tr_content[i].style.display = ""
+            }
+            else if (main_data_search_date.toUpperCase().indexOf(search_bar_content) > -1) {
+                tr_content[i].style.display = ""
+            }
+            else {
+                tr_content[i].style.display = "none";
+            }
+        }
+
     }
 }
 
